@@ -1,0 +1,12 @@
+.imgpopup__content {
+  display: flex;
+    
+    position: relative;
+    box-sizing: border-box;
+  }
+  
+  @media screen and (max-width: 540px) {
+    .inmpopup__content {
+      width: calc(100% - 60px);
+    }
+  }

@@ -1,0 +1,16 @@
+.button {
+  
+  display: block;
+  cursor: pointer;
+}
+
+.button:focus {
+  outline-color: greenyellow;
+}
+
+.button:disabled {
+  background-color: rgb(221,221,221);
+  color: rgba(0, 0, 0, .2);
+  cursor: default;
+
+}

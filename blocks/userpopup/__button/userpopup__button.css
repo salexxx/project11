@@ -1,0 +1,27 @@
+.userpopup__button {
+  width: 100%;
+  height: 50px;
+  border: 1px solid rgba(0, 0, 0, .2);
+  margin-top: 48px;
+  color: rgba(255, 255, 255);
+  background-color: rgba(0, 0, 0);
+ /* font-size: 36px;
+/* Сохранить */
+
+
+font-family: Inter;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 22px;
+text-align: center;
+
+
+}
+
+.userpopup__button:disabled {
+  background-color: rgb(221,221,221);
+  color: rgba(0, 0, 0, .2);
+  cursor: default;
+
+}
