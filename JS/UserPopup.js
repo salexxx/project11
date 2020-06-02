@@ -1,11 +1,11 @@
 
-class UserPopup  {
+export default class UserPopup  {
     constructor(elem){
        this.elem = elem;
     }
   
       close(){
-        userform.form.reset();
+        
         this.elem.classList.remove('popup_is-opened');
           
         }

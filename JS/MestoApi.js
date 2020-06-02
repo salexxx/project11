@@ -1,5 +1,5 @@
 /* Можно лучше: довольно общее название для класса, лучше отразить назначение сервера, например MestoApi */
-class MestoApi {
+ export default class MestoApi {
     constructor(options) {
        this.options = options;
       // тело конструктора
