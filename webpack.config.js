@@ -4,9 +4,8 @@ const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin"); 
 const webpack = require('webpack');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-// подключаем плагин
 const isDev = process.env.NODE_ENV === 'development';
-// создаем переменную для development-сборки
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     entry: { main: './src/index.js' },
@@ -63,5 +62,13 @@ module.exports = {
   new webpack.DefinePlugin({
     'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
 }),
+new CopyPlugin({
+  patterns: [
+      {
+          from: './images',
+          to: 'images'
+      }
+  ]
+})
   ]
 }
