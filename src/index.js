@@ -46,7 +46,7 @@ const api = new MestoApi({
 if (process.env.NODE_ENV === 'development'){
   api.baseUrl = 'http://praktikum.tk/cohort10';
 }
-console.log(api.baseUrl);
+//console.log(api.baseUrl);
 
 api.getUser()
 .then((res) => {
@@ -59,7 +59,7 @@ api.getUser()
 
 api.getInitialCards()
 .then((res) => {
-  console.log(res);
+//  console.log(res);
      cardsArray = res.map((elem) => {
      const card = new Card(elem.name, elem.link, elem.likes.length, elem.owner._id, elem._id, userId, api);
      return card.create()})
