@@ -1,3 +1,4 @@
+import 'core-js';
 import Card from '../JS/Card.js';
 import CardList from '../JS/CardList.js';
 import FormValidator from '../JS/FormValidator.js';
@@ -7,7 +8,7 @@ import MestoApi from '../JS/MestoApi.js';
 import UserInfo from '../JS/UserInfo.js';
 import UserPopup from '../JS/UserPopup.js';
 
-
+import 'core-js';
 import  '../pages/index.css';
 
 const userinfoButton = document.querySelector('.user-info__button');
