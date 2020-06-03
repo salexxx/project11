@@ -1,4 +1,3 @@
-import 'core-js';
 import Card from '../JS/Card.js';
 import CardList from '../JS/CardList.js';
 import FormValidator from '../JS/FormValidator.js';
@@ -8,7 +7,6 @@ import MestoApi from '../JS/MestoApi.js';
 import UserInfo from '../JS/UserInfo.js';
 import UserPopup from '../JS/UserPopup.js';
 
-import 'core-js';
 import  '../pages/index.css';
 
 const userinfoButton = document.querySelector('.user-info__button');
@@ -17,11 +15,6 @@ const popupclose = document.querySelector('.popup__close');
 const userpopupclose = document.querySelector('.userpopup__close');
 const imgpopupclose = document.querySelector('.imgpopup__close');
 
-const errorMessages = {
-  valueMissing: 'Это обязательное поле',
-  tooShort: 'Должно быть от 2 до 30 символов',
-  typeMismatch: 'Здесь должна быть ссылка'
-}
 
 let cardsArray = [];
 const card = new Card;
