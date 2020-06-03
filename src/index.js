@@ -33,6 +33,8 @@ const userinfo  = new UserInfo(document.querySelector('.user-info__button'));
 const addform = new FormValidator(document.querySelector('.popup__form'));
 const userform = new FormValidator(document.querySelector('.userpopup__form'));
 let userId = '';
+
+
 const api = new MestoApi({
   baseUrl: 'https://praktikum.tk/cohort10',
   headers: {
@@ -41,6 +43,10 @@ const api = new MestoApi({
   }
 });
 
+if (process.env.NODE_ENV === 'development'){
+  api.baseUrl = 'http://praktikum.tk/cohort10';
+}
+console.log(api.baseUrl);
 
 api.getUser()
 .then((res) => {
