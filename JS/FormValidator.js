@@ -4,10 +4,7 @@
       this.button = this.form.querySelector('button');
       
     }
-
     
-    
-    //checkInputValidity
     setSubmitButtonState(input){
       const errElem = input.nextElementSibling;
       const errorMessages = {
