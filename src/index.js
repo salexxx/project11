@@ -28,18 +28,14 @@ const addform = new FormValidator(document.querySelector('.popup__form'));
 const userform = new FormValidator(document.querySelector('.userpopup__form'));
 let userId = '';
 
-
+const Url = NODE_ENV === 'development' ? 'http://praktikum.tk/cohort10' : 'https://praktikum.tk/cohort10';
 const api = new MestoApi({
-  baseUrl: 'https://praktikum.tk/cohort10',
+  baseUrl: Url, 
   headers: {
     authorization: '7ef5077b-99dd-460c-a5bd-17774aa4e016',
     'Content-Type': 'application/json'
   }
 });
-
-if (process.env.NODE_ENV === 'development'){
-  api.baseUrl = 'http://praktikum.tk/cohort10';
-}
 
 api.getUser()
 .then((res) => {
