@@ -1,4 +1,4 @@
-class Card {
+ export default class Card {
     constructor (name, link, likes, elemownerId, elemId, userId, api){
       this.name = name;
       this.link = link;
@@ -11,12 +11,6 @@ class Card {
       this.like = this.like.bind(this);
     }
     create(){
-  /*  // Прочитайте на досуге вот про такие удобные вещи
-    // https://developer.mozilla.org/ru/docs/Web/HTML/Element/template -- шиблон
-    // https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment -- контейнер без лишних оберток
-    // очень выручают когда нужно создавать много похожих объектов
-    // будет здорово если попробуете реализовать, там реально 4-5 строк кода */
-
     const placeCard = document.createElement('div');
     const placecardImage = document.createElement('div');
     const placecardDescription = document.createElement('div');
@@ -45,17 +39,7 @@ class Card {
     placecardLikeArea.appendChild(placecardLikeQuantity);
     placeCard.appendChild(placecardImage);
     placeCard.appendChild(placecardDescription);
-/*
-    this._element = `<div class="place-card">
-    <div class="place-card__image" style="background: url(${this.link})">
-      <button class="place-card__delete-icon"></button>
-    </div>
-    <div class="place-card__description">
-      <h3 class="place-card__name">${this.name}</h3>
-      <button class="place-card__like-icon"></button>
-    </div>
-  </div>`
-return this._element; */
+
     this.placeCardElement = placeCard;
     this.setEventListener();
 
@@ -68,7 +52,6 @@ return this._element; */
         .addEventListener('click', this.like);
 
         if (this.elemownerId === this.userId){ 
-         // debugger;       
         this
         .placeCardElement
         .querySelector('.place-card__delete-icon')

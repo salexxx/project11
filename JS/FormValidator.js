@@ -1,14 +1,17 @@
-class FormValidator {
+ export default class FormValidator {
     constructor(form){
       this.form = form;
       this.button = this.form.querySelector('button');
+      
     }
-
     
-    
-    //checkInputValidity
     setSubmitButtonState(input){
       const errElem = input.nextElementSibling;
+      const errorMessages = {
+        valueMissing: 'Это обязательное поле',
+        tooShort: 'Должно быть от 2 до 30 символов',
+        typeMismatch: 'Здесь должна быть ссылка'
+      }
   if (input.value ==''){ return false}
     if (!input.checkValidity()) {
       if (input.validity.valueMissing) {

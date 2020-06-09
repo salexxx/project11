@@ -1,5 +1,5 @@
 
-class CardList {
+ export default class CardList {
     constructor(container, cardsArray){
       this.container = container;
       this.cardsArray = cardsArray;
@@ -7,7 +7,7 @@ class CardList {
     
     addCard(cardElement){
       this.container.appendChild(cardElement);
-      cardsArray.push(cardElement);
+      this.cardsArray.push(cardElement);
     }
   
     render(cardsArray){

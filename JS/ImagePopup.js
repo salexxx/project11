@@ -1,4 +1,4 @@
-class ImagePopup{
+export default class ImagePopup{
   constructor(event){
     this.event = event;
   }
